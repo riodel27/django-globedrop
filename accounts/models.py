@@ -23,10 +23,9 @@ class User(AbstractUser):
 
     # TODO: relation with Organization
 
-    # username = None
-    # USERNAME_FIELD = 'email'
-
-    # TODO: how to have an authentication to use username or email to login
+    USERNAME_FIELD = 'email'
+    EMAIL_FIELD = 'email'
+    REQUIRED_FIELDS = []
 
     def __str__(self):
         return self.email

@@ -5,8 +5,6 @@ from django.utils.translation import gettext_lazy as _
 from .models import User
 
 
-# TODO: how to modify admin for Accounts/Users
-
 class CustomUserAdmin(UserAdmin):
     model = User
     list_display = ('username', 'email', 'name', 'user_type',
