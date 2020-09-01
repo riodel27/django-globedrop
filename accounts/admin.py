@@ -13,7 +13,7 @@ class CustomUserAdmin(UserAdmin):
                     'language', 'created_at', 'updated_at')
 
     fieldsets = (
-        (None, {'fields': ('email', 'password')}),
+        (None, {'fields': ('username', 'email', 'password')}),
         (_('Personal info'), {'fields': (
             'name', )}),
         (_('Additional info'), {'fields': (
