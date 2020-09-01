@@ -8,7 +8,9 @@ from .models import User
 
 class CustomUserAdmin(UserAdmin):
     model = User
-    list_dispay = ['email', 'name']
+    list_display = ('username', 'email', 'name', 'user_type',
+                    'language', 'created_at', 'updated_at')
+    ordering = ['created_at']
 
 
 admin.site.register(User, CustomUserAdmin)
